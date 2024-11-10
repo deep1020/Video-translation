@@ -40,7 +40,7 @@ The client polls the server's `/status` endpoint with an exponential backoff str
 
 ## Screenshots
 
-1. ** Server Setup
+1. ** Server Setup **
 
    In this screenshot, the Flask server (server.py) starts up successfully:
 
