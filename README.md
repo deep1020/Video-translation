@@ -37,3 +37,13 @@ This project contains a server and client library to simulate a video translatio
 ## How It Works
 
 The client polls the server's `/status` endpoint with an exponential backoff strategy, stopping once it gets a `completed` or `error` status, or after reaching the maximum retries.
+
+## Screenshots
+
+1. ** Server Setup
+
+   In this screenshot, the Flask server (server.py) starts up successfully:
+
+   The server is running in debug mode and is serving the Flask app named server.
+   The server is accessible at http://127.0.0.1:5000.
+   This output confirms that the server is up and ready to accept requests on port 5000.
