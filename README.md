@@ -40,10 +40,14 @@ The client polls the server's `/status` endpoint with an exponential backoff str
 
 ## Screenshots
 
-1. ** Server Setup **
+1. **Server Setup**
 
-   In this screenshot, the Flask server (server.py) starts up successfully:
+   - In this screenshot, the Flask server (server.py) starts up successfully:
+      - The server is running in debug mode and is serving the Flask app named server.
+      - The server is accessible at http://127.0.0.1:5000.
+      - This output confirms that the server is up and ready to accept requests on port 5000.
+   
 
-   The server is running in debug mode and is serving the Flask app named server.
-   The server is accessible at http://127.0.0.1:5000.
-   This output confirms that the server is up and ready to accept requests on port 5000.
+2. **Client Job Status - Completed (Single Attempt)**
+
+   
