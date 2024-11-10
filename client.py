@@ -9,23 +9,19 @@ class VideoTranslationClient:
         self.initial_delay = initial_delay  # Initial delay in seconds for exponential backoff
 
     def get_status(self):
-        """
-        Fetches the current status from the server.
-        Returns the status as a string if the request is successful, or raises an error otherwise.
-        """
+        # Fetches the current status from the server. Returns the status as a string if the request is successful, or raises an error otherwise.
+
         try:
             response = requests.get(self.base_url)
-            response.raise_for_status()  # Raises an HTTPError for bad responses (4xx or 5xx)
+            response.raise_for_status()  # Raises an HTTPError for bad responses (e.g. 404)
             return response.json().get("result", "unknown")
         except requests.RequestException as e:
             print(f"An error occurred while fetching status: {e}")
             return "error"
 
     def wait_for_completion(self):
-        """
-        Polls the server for status updates using exponential backoff until
-        it receives 'completed' or 'error', or until max retries are reached.
-        """
+        # Polls the server for status updates using exponential backoff until it receives 'completed' or 'error', or until max retries are reached.
+
         delay = self.initial_delay
         for attempt in range(self.max_retries):
             status = self.get_status()
