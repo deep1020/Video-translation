@@ -1,12 +1,9 @@
 """
 Activate virtualenv for current interpreter:
-
 Use exec(open(this_file).read(), {'__file__': this_file}).
-
 This can be used when you must use an existing Python interpreter, not the virtualenv bin/python.
-"""  # noqa: D415
+"""
 from __future__ import annotations
-
 import os
 import site
 import sys
@@ -23,7 +20,7 @@ base = bin_dir[: -len("bin") - 1]  # strip away the bin part from the __file__, 
 # prepend bin to PATH (this file is inside the bin directory)
 os.environ["PATH"] = os.pathsep.join([bin_dir, *os.environ.get("PATH", "").split(os.pathsep)])
 os.environ["VIRTUAL_ENV"] = base  # virtual env is right above bin directory
-os.environ["VIRTUAL_ENV_PROMPT"] = "" or os.path.basename(base)  # noqa: SIM222
+os.environ["VIRTUAL_ENV_PROMPT"] = "" or os.path.basename(base)
 
 # add the virtual environments libraries to the host python import mechanism
 prev_length = len(sys.path)
