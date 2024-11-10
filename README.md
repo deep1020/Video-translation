@@ -41,7 +41,8 @@ The client polls the server's `/status` endpoint with an exponential backoff str
 ## Screenshots
 
 1. **Server Setup**
-
+   <img width="1115" alt="Screenshot 2024-11-10 at 2 49 55 PM" src="https://github.com/user-attachments/assets/f5f3f1f6-8aa0-4aa9-a73e-6e60bda99d2d">
+   
    - In this screenshot, the Flask server (server.py) starts up successfully:
       - The server is running in debug mode and is serving the Flask app named server.
       - The server is accessible at http://127.0.0.1:5000.
@@ -49,6 +50,7 @@ The client polls the server's `/status` endpoint with an exponential backoff str
    
 
 2. **Client Job Status - Completed (Single Attempt)**
+   <img width="1117" alt="Screenshot 2024-11-10 at 2 48 28 PM" src="https://github.com/user-attachments/assets/ec5a010d-f564-487b-a864-c461b5e9ef8b">
 
    - This output shows the status updates from client.py:
       - The script makes an initial attempt to check the job status.
@@ -56,6 +58,7 @@ The client polls the server's `/status` endpoint with an exponential backoff str
       - The final job status is confirmed as "completed," and the process finishes with an exit code of 0, indicating no errors.
     
 3. **Client Job Status - Completed (Multiple Attempts)**
+   <img width="1122" alt="Screenshot 2024-11-10 at 2 50 49 PM" src="https://github.com/user-attachments/assets/3166838d-c81f-4805-9996-1878f862fb1f">
 
    - In this output, client.py checks the job status in multiple attempts:
       - Initial attempts show the job status as "pending."
