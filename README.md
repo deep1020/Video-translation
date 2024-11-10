@@ -50,4 +50,14 @@ The client polls the server's `/status` endpoint with an exponential backoff str
 
 2. **Client Job Status - Completed (Single Attempt)**
 
-   
+   - This output shows the status updates from client.py:
+      - The script makes an initial attempt to check the job status.
+      - The status returns as "completed" on the first attempt, indicating that the job was successfully processed by the server.
+      - The final job status is confirmed as "completed," and the process finishes with an exit code of 0, indicating no errors.
+    
+3. **Client Job Status - Completed (Multiple Attempts)**
+
+   - In this output, client.py checks the job status in multiple attempts:
+      - Initial attempts show the job status as "pending."
+      - After several attempts, the status eventually updates to "completed."
+      - The final job status is "completed," and the script finishes with an exit code of 0. 
