@@ -6,7 +6,7 @@ This project contains a server and client library to simulate a video translatio
 
 - `server.py`: It uses Flask to simulate the status API and the simulate_processing function updates the status after a delay.
 - `client.py`: A client library that polls the server's `/status` endpoint with exponential backoff. VideoTranslationClient class uses exponential backoff and handles retries, which aligns with the assignment requirements.
-- `test_integration.py`: Runs a test to demonstrate the client library's polling functionality. The function wait_for_completion allow us to test the entire polling mechanism.
+- `test_integration.py`: It runs a test to demonstrate the client library's polling functionality. The function wait_for_completion allows us to test the entire polling mechanism.
 
 ## Setup Instructions
 
